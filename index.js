@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const part2 = document.getElementById("part2");
     const fadeInText = document.querySelector("#top p");
     const fadeInText2 = document.querySelector("#top h1");
+    const fadeInText3 = document.querySelector("header");
 
     const text1 = "Crafting";
     const textHighlight = "Lifestyle";
@@ -39,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     part2.textContent = "";
     fadeInText.classList.add("fade-in-target");
     fadeInText2.classList.add("fade-in-target");
-
+    fadeInText3.classList.add("fade-in-target");
+    
     let index = 0;
 
     // 各部分を1文字ずつ表示する関数
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             typeWriter(part2, text2, () => {
                 fadeInText.classList.add("fade-in"); // タイプライター終了後にフェードイン
                 fadeInText2.classList.add("fade-in");
+                fadeInText3.classList.add("fade-in");
             });
         });
     });

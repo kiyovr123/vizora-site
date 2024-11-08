@@ -281,7 +281,7 @@ body {
 
      .container {
         transform: scale(0.7); /* 90%に縮小 */
-        transform-origin: top; /* 上部左端から縮小 */
+        transform-origin: center; /* 上部左端から縮小 */
     } 
     /* サービスセクション */
     .services .container {
