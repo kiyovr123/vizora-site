@@ -1,0 +1,273 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Unbounded', sans-serif; /* フォントをUnboundedに設定 */
+    background-color: #150C09;
+}
+
+/* ヘッダーセクション */
+.header {
+    position: absolute; /* 絶対配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #FFEEC5;
+    padding-top: 64px; /* 上部のパディング */
+    text-align: center;
+    z-index: 10; /* 重なり順を上に設定 */
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column; /* 縦並び（ロゴ上、ナビ下） */
+    align-items: center; /* 中央揃え */
+}
+
+.logo img {
+    width: 218px; /* ロゴのサイズ調整 */
+    margin-bottom: 64px; /* ナビメニューとの間隔 */
+}
+
+/* ナビゲーションメニュー */
+.nav {
+    display: flex;
+    gap: 40px; /* 各リンクの間隔 */
+}
+
+.nav a {
+    color: #FFEEC5;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.nav a:hover {
+    color: #00d1b2; /* ホバー時の色変更（アクセントカラー） */
+    transform: translateY(-2px); /* ホバー時に少し上に移動するエフェクト */
+}
+
+/* TOPSECTION */
+.top {
+    position: relative;
+    background-image: url('img/bg.jpg'); /* 背景画像を指定 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 画面全体に表示 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFEEC5;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.top h1{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #F29A79;
+}
+
+.top h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    line-height: 45px;
+}
+
+.top p{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+}
+
+.top h2 .highlight {
+    color: #79F2BE; /* Lifestyleにのみ適用する色 */
+}
+
+/* サービスセクション */
+.services {
+    display: flex;
+    justify-content: center; /* 横方向の中央配置 */
+}
+
+
+.services .container {
+    width: 611px; /* 横幅を620pxに設定 */
+    text-align: left; /* 内部のテキストを左寄せ */
+    padding-top: 128px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.services h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #79F2BE;
+    margin-bottom: 40px; /* タイトル下に余白 */
+}
+
+.service-item {
+    margin-bottom: 48px; /* 各サービス項目の間隔 */
+}
+
+.service-item:last-child {
+    margin-bottom: 0; /* 最後の項目の下部マージンを削除 */
+}
+
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFEEC5;
+    line-height: 45px;
+    margin-bottom: 16px; /* サービス名の下の余白 */
+}
+
+.service-item p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.18em; /* 文字間隔を少し狭める */
+    color: #FFEEC5;
+    font-family: 'Shippori Mincho', serif; /* 日本語テキストにShippori Minchoを適用 */
+}
+
+
+/* サービスセクション */
+.company {
+    display: flex;
+    justify-content: center; /* 横方向の中央配置 */
+}
+
+
+.company .container {
+    width: 611px; /* 横幅を620pxに設定 */
+    text-align: left; /* 内部のテキストを左寄せ */
+    padding-top: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFEEC5;
+}
+
+
+.company h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #79F2BE;
+    margin-bottom: 40px; /* タイトル下に余白 */
+}
+
+/* テーブルスタイル */
+.company table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 64px;
+}
+
+.company th, .company td {
+    padding: 12px 0; /* 各セルに余白 */
+    vertical-align: top;
+}
+
+.company th {
+    text-align: left;
+    width: 30%; /* 左側の幅を調整 */
+}
+
+.company td {
+    text-align: left;
+}
+
+.company td p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 会社概要セクションのテキスト */
+.company th, .company td{
+    font-family: 'Shippori Mincho', serif; /* 日本語テキストにShippori Minchoを適用 */
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFEEC5; /* 項目名の色 */
+
+}
+
+.map{
+    margin-bottom: 128px;
+}
+.map .container {
+    padding: 0 62px; /* 左右に62pxの余白を追加 */
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #79F2BE; /* タイトルの色 */
+    margin-bottom: 40px; /* タイトル下の余白 */
+}
+
+.map p {
+    font-size: 16px;
+    color: #EAEAEA; /* 住所のテキスト色 */
+    margin-bottom: 24px; /* 住所と地図の間に余白 */
+}
+
+/* フッターセクション */
+.footer {
+    background-color: #79F2BE; /* 背景色を指定 */
+    padding: 40px 20px; /* 上下の余白 */
+    color: #150C09; /* テキストの色を濃い色に設定 */
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center; /* 左右に配置 */
+    max-width: 620px;
+    margin: 0 auto;
+    align-items: flex-start; /* 上揃えに設定 */
+}
+
+.footer-left{
+    margin-right: 60px;
+}
+.footer-logo {
+    width: 218px; /* ロゴのサイズ調整 */
+}
+
+.footer-right .contact-link {
+    display: inline-block;
+    font-weight: 900;
+    color: #1A1A1A;
+    text-decoration: none;
+    margin-bottom: 16px;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+}
+
+.footer-right .contact-link:hover {
+    text-decoration: underline;
+}
+
+
+.footer-right p {
+    font-size: 12px;
+    line-height: 36px;
+    margin: 4px 0;
+    font-family: 'Shippori Mincho', serif; /* 日本語テキストにShippori Minchoを適用 */
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.footer-copyright{
+    font-family: 'Unbounded', sans-serif !important;
+}
