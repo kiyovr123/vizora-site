@@ -28,15 +28,16 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <!-- CSS and JavaScript -->
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 
 <body>
-        <!-- ヘッダーセクション -->
+    <!-- ヘッダーセクション -->
     <header class="header">
         <div class="container">
             <!-- 上部：ロゴ -->
@@ -56,18 +57,21 @@
     <!-- トップセクション -->
     <section id="top" class="top">
         <div class="container">
-            <h1>VIZORA, Inc.</h1>
-            <h2>Crafting <span class="highlight">Lifestyle</span><br> with Technology.</h2>
-            <p>SOFTWARE DESIGN & DEVELOPMENT FOR<br>
+            <h1 class="fade-in-target">VIZORA, Inc.</h1>
+            <h2 id="typewriter-text">
+                <span id="part1">Crafting</span> <span id="highlight" class="highlight">Lifestyle</span><br><span id="part2">with Technology.</span>
+            </h2>
+            <p class="fade-in-target">SOFTWARE DESIGN & DEVELOPMENT FOR<br>
             AUGMENTED REALITY / VIRTUAL REALITY /<br>
             TABLET & SMARTPHONE APPLICATION</p>
         </div>
     </section>
 
+
     <!-- サービスセクション -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Services</h2>
+            <h2 class="service-title">Services</h2>
 
             <div class="service-item">
                 <h3>AUGMENTED REALITY</h3>

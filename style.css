@@ -89,8 +89,9 @@ body {
     letter-spacing: 0.1em;
 }
 
-.top h2 .highlight {
-    color: #79F2BE; /* Lifestyleにのみ適用する色 */
+
+.highlight {
+    color: #79F2BE; /* Lifestyle の文字色 */
 }
 
 /* サービスセクション */
@@ -277,6 +278,11 @@ body {
 /* スマートフォン対応 */
 /* スマートフォン用レイアウト */
 @media screen and (max-width: 768px) {
+
+     .container {
+        transform: scale(0.7); /* 90%に縮小 */
+        transform-origin: top; /* 上部左端から縮小 */
+    } 
     /* サービスセクション */
     .services .container {
         width: auto; /* 幅を自動調整 */
@@ -297,9 +303,14 @@ body {
         line-height: 24px; /* 行間を少し広げて読みやすく */
     }
 
+    .company{
+        display: block;
+    }
     .company .container {
+        margin-left: 0;
+        margin-right: 0;
         text-align: left;
-        padding:  128px 18px 0px 18px; /* 左右に18pxの余白を追加 */
+        padding:  128px 18px 0px 18px;
     }
 
     .map .container{
@@ -316,5 +327,69 @@ body {
     .footer-left{
         margin: 0;
     }
-    
 }
+
+/* アニメーション */
+
+/* フェードイン＋スライドインアニメーション */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* アニメーションが開始される前は透明 */
+.service-item {
+    opacity: 0; /* 初期状態を非表示 */
+    transform: translateX(-20px); /* 少し左にスライドした位置に */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* スムーズに表示するためのトランジション */
+}
+
+.fade-in-left {
+    opacity: 1; /* アニメーションで表示 */
+    transform: translateX(0); /* 位置を元に戻す */
+}
+
+/* サービスタイトル用のフェードイン＋スライドインアニメーション */
+.service-title {
+    opacity: 0; /* 初期状態で透明 */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up {
+    opacity: 1;
+}
+
+#typewriter-text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.highlight {
+    color: #79F2BE; /* Lifestyle の文字色 */
+}
+
+/* 初期状態で非表示 */
+.fade-in-target {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+/* フェードインのアニメーション */
+.fade-in {
+    opacity: 1 !important;
+}
+
+
+
+
