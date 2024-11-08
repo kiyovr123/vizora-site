@@ -270,4 +270,51 @@ body {
 
 .footer-copyright{
     font-family: 'Unbounded', sans-serif !important;
+    letter-spacing: 0.1em;
+}
+
+
+/* スマートフォン対応 */
+/* スマートフォン用レイアウト */
+@media screen and (max-width: 768px) {
+    /* サービスセクション */
+    .services .container {
+        width: auto; /* 幅を自動調整 */
+        padding:  128px 18px 0px 18px; /* 左右に18pxの余白を追加 */
+    }
+
+    /* テキストの調整 (必要に応じて) */
+    .services h2 {
+        font-size: 28px; /* タイトルのフォントサイズを調整 */
+    }
+
+    .service-item h3 {
+        font-size: 20px; /* サービス名のフォントサイズを調整 */
+    }
+
+    .service-item p {
+        font-size: 12px; /* テキストのフォントサイズを調整 */
+        line-height: 24px; /* 行間を少し広げて読みやすく */
+    }
+
+    .company .container {
+        text-align: left;
+        padding:  128px 18px 0px 18px; /* 左右に18pxの余白を追加 */
+    }
+
+    .map .container{
+        padding: 0 18px;
+    }
+
+    .map iframe {
+        width: 614px;
+        height: 740px;
+        max-width: 100%; /* 画面幅に応じて縮小 */
+        border: 0;
+    }
+
+    .footer-left{
+        margin: 0;
+    }
+    
 }
