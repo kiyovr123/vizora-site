@@ -55,7 +55,6 @@ body {
 /* TOPSECTION */
 .top {
     position: relative;
-    background-image: url('img/bg.jpg'); /* 背景画像を指定 */
     background-size: cover;
     background-position: center;
     height: 100vh; /* 画面全体に表示 */
@@ -66,7 +65,19 @@ body {
     text-align: center;
     overflow: hidden;
     padding-bottom: 100px;
+    background-color: #150C09; /* 画像が読み込まれる前に表示する色 */
+    background-image: none;
+    transition: background-image 0.5s ease-in; /* 画像表示時のフェードイン効果 */
 }
+
+/* 画像がロードされたときに適用するスタイル */
+.top.loaded {
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 .top h1{
     font-size: 12px;
@@ -390,6 +401,33 @@ body {
     opacity: 1 !important;
 }
 
+/* Companyセクションのタイトルとテーブルのアニメーション */
+.company-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
 
+.company-table {
+    opacity: 0;
+    transform: translateX(-20px); /* 左からスライドイン */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* Mapセクションのアニメーション */
+.map-section {
+    opacity: 0;
+    transform: translateY(20px); /* 下からスライドイン */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* アニメーション発動クラス */
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
