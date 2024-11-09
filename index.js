@@ -105,6 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     img.src = 'img/bg.jpg';
 
     img.onload = () => {
-        topSection.classList.add('loaded');
+        topSection.classList.add('loaded'); // 背景画像がロードされたらフェードイン
     };
 });
