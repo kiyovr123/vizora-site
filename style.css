@@ -76,8 +76,6 @@ body {
     opacity: 1;
 }
 
-
-
 .top h1{
     font-size: 12px;
     font-weight: 600;
@@ -284,61 +282,6 @@ body {
     letter-spacing: 0.1em;
 }
 
-
-/* スマートフォン対応 */
-/* スマートフォン用レイアウト */
-@media screen and (max-width: 768px) {
-
-     .container {
-        transform: scale(0.7); /* 90%に縮小 */
-        transform-origin: center; /* 上部左端から縮小 */
-    } 
-    /* サービスセクション */
-    .services .container {
-        width: auto; /* 幅を自動調整 */
-        padding:  128px 18px 0px 18px; /* 左右に18pxの余白を追加 */
-    }
-
-    /* テキストの調整 (必要に応じて) */
-    .services h2 {
-        font-size: 28px; /* タイトルのフォントサイズを調整 */
-    }
-
-    .service-item h3 {
-        font-size: 20px; /* サービス名のフォントサイズを調整 */
-    }
-
-    .service-item p {
-        font-size: 12px; /* テキストのフォントサイズを調整 */
-        line-height: 24px; /* 行間を少し広げて読みやすく */
-    }
-
-    .company{
-        display: block;
-    }
-    .company .container {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: left;
-        padding:  128px 18px 0px 18px;
-    }
-
-    .map .container{
-        padding: 0 18px;
-    }
-
-    .map iframe {
-        width: 614px;
-        height: 740px;
-        max-width: 100%; /* 画面幅に応じて縮小 */
-        border: 0;
-    }
-
-    .footer-left{
-        margin: 0;
-    }
-}
-
 /* アニメーション */
 
 /* フェードイン＋スライドインアニメーション */
@@ -352,8 +295,6 @@ body {
         transform: translateX(0);
     }
 }
-
-
 
 /* アニメーションが開始される前は透明 */
 .service-item {
@@ -429,4 +370,66 @@ body {
     transform: translateX(0);
 }
 
+@media (max-width: 768px) {
+    .nav a {
+        font-size: 10px;
+    }
+
+    .top h1{
+        font-size: 10px;
+
+    }
+    
+    #typewriter-text{
+        font-size: 28px;
+    }    
+    .top p{
+        font-size: 10px;
+    }
+
+    .services .container{
+        padding-top: 64px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .services h2{
+        font-size: 28px;
+    }
+    .service-item{
+        margin-bottom: 36px;
+    }
+
+    .service-item h3{
+        font-size: 18px;
+    }
+
+    .company .container{
+        padding-top: 64px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .company h2{
+        font-size: 28px;
+    }
+
+    .map{
+        margin-bottom: 64px;
+    }
+    .map .container{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .footer-content{
+        flex-direction: column; 
+         align-items: center; 
+    }
+
+    .footer{
+        padding-bottom: 0px;
+    }
+
+}
 
