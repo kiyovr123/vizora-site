@@ -10,6 +10,7 @@ body {
     background-color: #150C09;
 }
 
+
 /* ヘッダーセクション */
 .header {
     position: absolute; /* 絶対配置 */
@@ -145,7 +146,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 0.18em; /* 文字間隔を少し狭める */
+    letter-spacing: 0.1em; /* 文字間隔を少し狭める */
     color: #FFEEC5;
     font-family: 'Shippori Mincho', serif; /* 日本語テキストにShippori Minchoを適用 */
 }
@@ -180,11 +181,13 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 64px;
+    letter-spacing: 0.1em;
 }
 
 .company th, .company td {
     padding: 12px 0; /* 各セルに余白 */
     vertical-align: top;
+    line-height: 24px;
 }
 
 .company th {
@@ -258,7 +261,7 @@ body {
     font-weight: 900;
     color: #1A1A1A;
     text-decoration: none;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     font-size: 12px;
     letter-spacing: 0.07em;
 }
@@ -271,15 +274,20 @@ body {
 .footer-right p {
     font-size: 12px;
     line-height: 36px;
-    margin: 4px 0;
     font-family: 'Shippori Mincho', serif; /* 日本語テキストにShippori Minchoを適用 */
     font-weight: 500;
     font-size: 12px;
 }
 
+.footer-information{
+    margin-bottom: 32px;
+
+}
+
 .footer-copyright{
     font-family: 'Unbounded', sans-serif !important;
     letter-spacing: 0.1em;
+    margin-bottom: 0px;
 }
 
 /* アニメーション */
@@ -375,16 +383,30 @@ body {
         font-size: 10px;
     }
 
+    #top{
+        padding-bottom: 0;
+    }
+
     .top h1{
         font-size: 10px;
+        margin-bottom: 16px;
 
     }
     
     #typewriter-text{
         font-size: 28px;
+        line-height: 38px;
     }    
     .top p{
         font-size: 10px;
+    }
+
+    .top h2{
+        margin-bottom: 16px;
+    }
+
+    .logo img{
+        margin-bottom: 32px;
     }
 
     .services .container{
@@ -402,6 +424,8 @@ body {
 
     .service-item h3{
         font-size: 18px;
+        margin-bottom: 0;
+        letter-spacing: 0.05em;
     }
 
     .company .container{
@@ -429,6 +453,14 @@ body {
 
     .footer{
         padding-bottom: 0px;
+    }
+
+    .footer-left{
+        margin-bottom: 16px;
+    }
+
+    .footer-copyright{
+        margin-bottom: 32px;
     }
 
 }

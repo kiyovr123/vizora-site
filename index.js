@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index < text.length) {
                 element.textContent += text[index];
                 index++;
-                setTimeout(type, 100); // 各文字の表示間隔
+                setTimeout(type, 50); // 各文字の表示間隔
             } else if (callback) {
                 callback();
             }
